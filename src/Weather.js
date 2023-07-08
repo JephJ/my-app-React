@@ -2,20 +2,18 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 export default function Weather(props) {
-
-  const [weatherData, setWeatherData] = useState({ready:false});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     setWeatherData({
-      ready:true,
+      ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date :"Sat 07:00",
+      date: "Sat 07:00",
       description: response.data.weather[0].description,
       iconUrl: " https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       wind: response.data.wind.speed,
       city: response.data.name,
     });
-
   }
 
   if (weatherData.ready) {
@@ -50,7 +48,10 @@ export default function Weather(props) {
           <div className="col -6">
             <img src={weatherData.iconUrl} alt={weatherData.description} />
 
-            <span className="temperature"> {Math.round(weatherData.temperature)}</span>
+            <span className="temperature">
+              {" "}
+              {Math.round(weatherData.temperature)}
+            </span>
             <span className="unit">&deg;C</span>
           </div>
           <div className="col -6 ">
