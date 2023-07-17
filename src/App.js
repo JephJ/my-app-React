@@ -9,9 +9,19 @@ function App() {
         <Weather   defaultCity = "Columbia"/>
         <footer>
           This project coded by Jenn
-          <a href="https://creative-gecko-bbc428.netlify.app/" target="blank">
-            Website
+          <a href= "https://github.com/JephJ/my-app-React" target="blank">
+          open-sourced on GitHub
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://creative-gecko-bbc428.netlify.app/"
+            target="_blank"
+          
+          >
+            hosted on Netlify
           </a>
+            
+
         </footer>
       </div>
     </div>
